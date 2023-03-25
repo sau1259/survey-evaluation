@@ -56,7 +56,16 @@ final_table = pd.DataFrame()
 #service = Service(executable_path=CHROMEDRIVER_PATH)
 #driver = webdriver.Chrome(service=service)
 chromedriver_autoinstaller.install()
-driver = webdriver.Chrome()
+
+#Chrome options
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument("--disable-infobars")
+chrome_options.add_argument('--disable-dev-shm-usage')
+
+#Run chrome
+driver = webdriver.Chrome(options=chrome_options)
+
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

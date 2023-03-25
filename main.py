@@ -59,8 +59,8 @@ final_table = pd.DataFrame()
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
-service = Service(executable_path=ChromeDriverManager(version='111.0.5563.64').install(), options=options)
-driver = webdriver.Chrome(service=service)
+service = Service(executable_path=ChromeDriverManager(version='111.0.5563.64').install())
+driver = webdriver.Chrome(service=service, options=options)
 
 
 # Loop to fetch all the records 

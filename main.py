@@ -1,6 +1,7 @@
 #from settings import CHROMEDRIVER_PATH
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import chromedriver_autoinstaller
@@ -55,16 +56,15 @@ final_table = pd.DataFrame()
 # Load Required drivers and services
 #service = Service(executable_path=CHROMEDRIVER_PATH)
 #driver = webdriver.Chrome(service=service)
-chromedriver_autoinstaller.install()
 
-#Chrome options
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument("--disable-infobars")
-chrome_options.add_argument('--disable-dev-shm-usage')
-
-#Run chrome
-driver = webdriver.Chrome(options=chrome_options)
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-features=NetworkService")
+options.add_argument("--window-size=1920x1080")
+options.add_argument("--disable-features=VizDisplayCompositor")
 
 
 # Loop to fetch all the records 

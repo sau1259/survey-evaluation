@@ -51,11 +51,11 @@ final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 
-#CHROMEDRIVER_PATH = './chromedriver'
+CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
 
 # Load Required drivers and services
-#service = Service(executable_path=CHROMEDRIVER_PATH)
-driver = webdriver.Chrome()
+service = Service(executable_path=CHROMEDRIVER_PATH)
+driver = webdriver.Chrome(service=service)
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

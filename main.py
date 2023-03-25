@@ -51,15 +51,16 @@ final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 
-CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
+#CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
 
 # Load Required drivers and services
 #service = Service(executable_path=CHROMEDRIVER_PATH)
 #driver = webdriver.Chrome(service=service)
 
 options = webdriver.ChromeOptions()
-options.add_argument('headless')
-driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install(), options=options)
+options.add_argument('--headless')
+service = Service(executable_path=ChromeDriverManager(version='111.0.5563.64').install(), options=options)
+driver = webdriver.Chrome(service=service)
 
 
 # Loop to fetch all the records 

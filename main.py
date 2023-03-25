@@ -59,7 +59,7 @@ final_table = pd.DataFrame()
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install(version="111.0.5563.64")), options=options)
+driver = webdriver.Chrome(service=Service(ChromeDriverManager(version="111.0.5563.64").install()), options=options)
 
 
 # Loop to fetch all the records 

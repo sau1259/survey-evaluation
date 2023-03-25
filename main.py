@@ -51,10 +51,10 @@ final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 
-#CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
+CHROMEDRIVER_PATH = '/chromedriver'
 
 # Load Required drivers and services
-#service = Service(executable_path=CHROMEDRIVER_PATH)
+service = Service(executable_path=CHROMEDRIVER_PATH)
 #driver = webdriver.Chrome(service=service)
 
 options = Options()
@@ -65,7 +65,7 @@ options.add_argument("--disable-gpu")
 options.add_argument("--disable-features=NetworkService")
 options.add_argument("--window-size=1920x1080")
 options.add_argument("--disable-features=VizDisplayCompositor")
-driver = webdriver.Chrome(service=Service(ChromeDriverManager(version="111.0.5563.64").install()), options=options)
+driver = webdriver.Chrome(service=service, options=options)
 
 
 # Loop to fetch all the records 

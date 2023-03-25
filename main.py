@@ -1,10 +1,9 @@
 #from settings import CHROMEDRIVER_PATH
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-import chromedriver_autoinstaller
+from webdriver_manager.chrome import ChromeDriverManager
 
 import pandas as pd
 import numpy as np
@@ -54,8 +53,10 @@ final_table = pd.DataFrame()
 CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
 
 # Load Required drivers and services
-service = Service(executable_path=CHROMEDRIVER_PATH)
-driver = webdriver.Chrome(service=service)
+#service = Service(executable_path=CHROMEDRIVER_PATH)
+#driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

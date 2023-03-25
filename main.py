@@ -55,17 +55,7 @@ final_table = pd.DataFrame()
 
 # Load Required drivers and services
 #service = Service(executable_path=CHROMEDRIVER_PATH)
-#driver = webdriver.Chrome(service=service)
-
-options = Options()
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")
-options.add_argument("--disable-gpu")
-options.add_argument("--disable-features=NetworkService")
-options.add_argument("--window-size=1920x1080")
-options.add_argument("--disable-features=VizDisplayCompositor")
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome()
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

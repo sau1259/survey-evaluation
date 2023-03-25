@@ -51,12 +51,13 @@ final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 
-CHROMEDRIVER_PATH = '/chromedriver'
+#CHROMEDRIVER_PATH = '/chromedriver'
 
 # Load Required drivers and services
-service = Service(executable_path=CHROMEDRIVER_PATH)
+#service = Service(executable_path=CHROMEDRIVER_PATH)
 #driver = webdriver.Chrome(service=service)
 
+'''
 options = Options()
 options.add_argument("--headless")
 options.add_argument("--no-sandbox")
@@ -66,7 +67,15 @@ options.add_argument("--disable-features=NetworkService")
 options.add_argument("--window-size=1920x1080")
 options.add_argument("--disable-features=VizDisplayCompositor")
 driver = webdriver.Chrome(service=service, options=options)
+'''
 
+chrome = Chrome()
+chrome.add_argument("--headless")
+service = Service(ChromeDriverManager(version="111.0.5563.64").install())
+driver = webdriver.Chrome(
+    options=chrome,
+    service=service,
+)
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

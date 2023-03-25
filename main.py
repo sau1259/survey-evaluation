@@ -58,7 +58,7 @@ CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
 #driver = webdriver.Chrome(service=service)
 
 options = webdriver.ChromeOptions()
-options.add_argument('--no-sandbox')
+options.add_argument('--headless')
 driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install(), options=options)
 
 

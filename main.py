@@ -55,7 +55,7 @@ CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
 # Load Required drivers and services
 #service = Service(executable_path=CHROMEDRIVER_PATH)
 #driver = webdriver.Chrome(service=service)
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install())
 
 
 # Loop to fetch all the records 

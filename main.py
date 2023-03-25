@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 
 import pandas as pd
 import numpy as np
@@ -55,6 +56,9 @@ CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
 # Load Required drivers and services
 #service = Service(executable_path=CHROMEDRIVER_PATH)
 #driver = webdriver.Chrome(service=service)
+
+options = webdriver.ChromeOptions()
+options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install())
 
 

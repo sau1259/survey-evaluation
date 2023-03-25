@@ -59,7 +59,7 @@ CHROMEDRIVER_PATH = 'sau1259/survey-evaluation/chromedriver'
 
 options = webdriver.ChromeOptions()
 options.add_argument('--no-sandbox')
-driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install())
+driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install(), options=options)
 
 
 # Loop to fetch all the records 

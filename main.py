@@ -65,7 +65,7 @@ options.add_argument("--disable-gpu")
 options.add_argument("--disable-features=NetworkService")
 options.add_argument("--window-size=1920x1080")
 options.add_argument("--disable-features=VizDisplayCompositor")
-
+driver = webdriver.Chrome(options=options)
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

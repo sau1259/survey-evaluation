@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
 
 
 import pandas as pd
@@ -53,7 +52,8 @@ final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 
-CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+#CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+CHROMEDRIVER_PATH = ChromeDriverManager().install()
 
 # Load Required drivers and services
 #service = Service(executable_path=CHROMEDRIVER_PATH)

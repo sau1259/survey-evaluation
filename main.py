@@ -66,7 +66,7 @@ chromedriver_path = "/home/appuser/.wdm/drivers/chromedriver/linux64/111.0.5563/
 
 # Change the permissions on the chromedriver binary
 os.chmod(chromedriver_path, 0o775)
-driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install(), options=chrome_options)
+driver = webdriver.Chrome(chromedriver_path, options=chrome_options)
 
 
 

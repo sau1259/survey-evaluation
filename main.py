@@ -51,7 +51,6 @@ my_bar = st.progress(0, text=progress_text)
 final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
-!chmod +x chromedriver
 CHROMEDRIVER_PATH = '.streamlit/chromedriver'
 
 # Load Required drivers and services

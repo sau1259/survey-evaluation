@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver import Chrome
+
 
 import pandas as pd
 import numpy as np
@@ -70,13 +70,9 @@ options.add_argument("--disable-features=VizDisplayCompositor")
 driver = webdriver.Chrome(service=service, options=options)
 '''
 
-chrome = Chrome()
-chrome.add_argument("--headless")
 service = Service(ChromeDriverManager(version="111.0.5563.64").install())
-driver = webdriver.Chrome(
-    options=chrome,
-    service=service,
-)
+print('Driver got installed')
+driver = webdriver.Chrome(service=service)
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

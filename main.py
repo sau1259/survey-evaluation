@@ -1,4 +1,5 @@
 #from settings import CHROMEDRIVER_PATH
+import chromedriver_binary
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -71,7 +72,7 @@ options.add_argument("--disable-features=VizDisplayCompositor")
 driver = webdriver.Chrome(service=service, options=options)
 '''
 
-service = Service(ChromeDriverManager(version="111.0.5563.64").install())
+#service = Service(ChromeDriverManager(version="111.0.5563.64").install())
 print('Driver got installed')
 driver = webdriver.Chrome(options=options)
 

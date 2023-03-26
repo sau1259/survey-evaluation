@@ -59,7 +59,7 @@ chrome_options.add_argument("--headless")
 
 # Load Required drivers and services
 service = Service(executable_path=CHROMEDRIVER_PATH)
-driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+driver = webdriver.Chrome(ChromeDriverManager(version='111.0.5563.64').install(), options=chrome_options)
 
 
 

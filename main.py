@@ -52,7 +52,7 @@ my_bar = st.progress(0, text=progress_text)
 final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
-CHROMEDRIVER_PATH = './chromedriver'
+CHROMEDRIVER_PATH = '.chromedriver'
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--headless")

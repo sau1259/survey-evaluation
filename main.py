@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common import options
-
+import os
 
 import pandas as pd
 import numpy as np
@@ -52,7 +52,7 @@ my_bar = st.progress(0, text=progress_text)
 final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
-CHROMEDRIVER_PATH = '.chromedriver'
+CHROMEDRIVER_PATH = os.getenv('CHROMEDRIVER_PATH')
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--headless")

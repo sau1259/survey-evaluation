@@ -1,1 +1,2 @@
-chromium
+selenium
+chromedriver-binary

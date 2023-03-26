@@ -55,16 +55,11 @@ final_table = pd.DataFrame()
 CHROMEDRIVER_PATH = ChromeDriverManager().install()
 
 # Load Required drivers and services
-#service = Service(executable_path=CHROMEDRIVER_PATH)
-#driver = webdriver.Chrome(service=service)
+service = Service(executable_path=CHROMEDRIVER_PATH)
+driver = webdriver.Chrome(service=service)
 
 
-options = Options()
-options.add_argument("--headless")
 
-#service = Service(ChromeDriverManager(version="111.0.5563.64").install())
-print('Driver got installed')
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
 
 # Loop to fetch all the records 
 for data_row in range (len(data)):

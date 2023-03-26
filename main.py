@@ -52,14 +52,14 @@ my_bar = st.progress(0, text=progress_text)
 final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
-CHROMEDRIVER_PATH = os.getenv('CHROMEDRIVER_PATH')
+CHROMEDRIVER_PATH = 'chromedriver
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--headless")
 
 # Load Required drivers and services
 service = Service(executable_path=CHROMEDRIVER_PATH)
-driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 
 

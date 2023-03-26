@@ -65,7 +65,7 @@ chrome_options.add_argument("--headless")
 chromedriver_path = "/home/appuser/.wdm/drivers/chromedriver/linux64/111.0.5563/chromedriver"
 
 # Change the permissions on the chromedriver binary
-os.chmod(chromedriver_path, 0o775)
+os.chmod(chromedriver_path, 775)
 driver = webdriver.Chrome(chromedriver_path, options=chrome_options)
 
 

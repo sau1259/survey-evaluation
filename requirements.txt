@@ -4,4 +4,4 @@ pandas==1.5.3
 selenium==4.4.3
 webdriver-manager
 streamlit==1.20.0
-chromedriver-binary
+chromedriver-binary==93.0.4577.63.0

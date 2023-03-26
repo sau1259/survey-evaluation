@@ -52,7 +52,7 @@ final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 filename = ".streamlit/chromedriver"
-os.chmod(filename, 0o755)
+os.chmod(filename, 755)
 CHROMEDRIVER_PATH = '.streamlit/chromedriver'
 
 # Load Required drivers and services

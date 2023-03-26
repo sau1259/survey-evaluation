@@ -52,7 +52,7 @@ final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 
-CHROMEDRIVER_PATH = 'app/.chromedriver/bin/chromedriver'
+CHROMEDRIVER_PATH = 'chromedriver'
 
 # Load Required drivers and services
 service = Service(executable_path=CHROMEDRIVER_PATH)

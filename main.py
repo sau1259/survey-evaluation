@@ -5,7 +5,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
-import os
+from selenium.webdriver.common import options
+
 
 import pandas as pd
 import numpy as np
@@ -53,9 +54,12 @@ final_table = pd.DataFrame()
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 CHROMEDRIVER_PATH = 'chromedriver'
 
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--headless")
+
 # Load Required drivers and services
 service = Service(executable_path=CHROMEDRIVER_PATH)
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 
 

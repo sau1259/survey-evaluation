@@ -54,8 +54,8 @@ final_table = pd.DataFrame()
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 #CHROMEDRIVER_PATH = 'chromedriver'
 
-#chrome_options = webdriver.ChromeOptions()
-#chrome_options.add_argument("--headless")
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--headless")
 
 
 # Load Required drivers and services

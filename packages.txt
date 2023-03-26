@@ -1,2 +1,2 @@
-streamlit
-selenium
+chromium
+chromium-driver

@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
-
+import os
 
 import pandas as pd
 import numpy as np
@@ -51,8 +51,9 @@ my_bar = st.progress(0, text=progress_text)
 final_table = pd.DataFrame()
 
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
-
-CHROMEDRIVER_PATH = '/.streamlit/chromedriver'
+filename = ".streamlit/chromedriver"
+os.chmod(filename, 0o755)
+CHROMEDRIVER_PATH = '.streamlit/chromedriver'
 
 # Load Required drivers and services
 service = Service(executable_path=CHROMEDRIVER_PATH)

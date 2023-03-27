@@ -54,19 +54,19 @@ final_table = pd.DataFrame()
 # -------------------------------- Selenium Code for Automation ----------------------------------------------
 #CHROMEDRIVER_PATH = 'chromedriver'
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("--headless")
+#chrome_options = webdriver.ChromeOptions()
+#chrome_options.add_argument("--headless")
 
 
 # Load Required drivers and services
 #service = Service(executable_path=CHROMEDRIVER_PATH)
 
 # Set the path to the chromedriver binary
-chromedriver_path = "chromedriver"
-
+service = ChromeService(executable_path=ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
 # Change the permissions on the chromedriver binary
-os.chmod(chromedriver_path, 775)
-driver = webdriver.Chrome(chromedriver_path, options=chrome_options)
+
+
 
 
 
